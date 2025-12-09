@@ -1,0 +1,776 @@
+/* Add Google font import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+:root {
+	/* Palette from uploaded image (Gourmet Catering) */
+	--dark-brown: #3B2B1F;
+	/* primary / text */
+	--light-cream: #F5EDE1;
+	/* background */
+	--gold: #C7A15A;
+	/* accent / CTA */
+	--white: #ffffff;
+	--muted: #6B6B6B;
+	--footer-dark: #2a211a;
+}
+
+/* Global */
+html,
+body {
+	font-family: 'Poppins', Arial, Helvetica, sans-serif;
+	background-color: var(--light-cream);
+	color: var(--dark-brown);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1.45;
+	margin: 0;
+	padding: 0;
+}
+
+/* Containers */
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+/* Navbar */
+.navbar {
+	background-color: var(--light-cream) !important;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.navbar .navbar-brand {
+	color: var(--dark-brown) !important;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	font-size: 1.25rem;
+}
+
+.navbar .navbar-nav .nav-link {
+	color: var(--dark-brown) !important;
+	font-weight: 600;
+	margin-left: 0.25rem;
+	transition: color 0.15s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+	color: var(--gold) !important;
+}
+
+.navbar .navbar-nav .nav-link.active {
+	color: var(--gold) !important;
+}
+
+/* Hero sections (use light cream background) */
+.hero,
+.menu-hero,
+.quote-hero,
+.packages-hero {
+	padding: 2.5rem 0;
+	background: var(--light-cream);
+}
+
+.hero-content h1,
+.hero-content h2,
+.menu-hero h1,
+.menu-hero h2,
+.quote-hero h1 {
+	color: var(--dark-brown);
+	font-weight: 700;
+}
+
+/* CTA buttons */
+.cta-button,
+button.cta-button,
+.btn-cta {
+	background-color: var(--gold);
+	color: var(--dark-brown);
+	padding: 0.75rem 1.75rem;
+	border-radius: 25px;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: 700;
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cta-button:hover,
+.btn-cta:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 6px 14px rgba(59, 43, 31, 0.12);
+}
+
+/* Primary Buttons */
+.btn-submit,
+.submit-button {
+	background-color: var(--dark-brown);
+	color: var(--light-cream);
+	border: none;
+	padding: 0.65rem 1.25rem;
+	border-radius: 6px;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.btn-submit:hover,
+.submit-button:hover {
+	opacity: 0.95;
+}
+
+/* Menu-specific styles */
+.menu-hero {
+	background: var(--light-cream);
+	text-align: center;
+	padding: 3.5rem 0;
+}
+
+.menu-hero h1 {
+	color: var(--dark-brown);
+}
+
+.menu-hero p {
+	color: rgba(59, 43, 31, 0.85);
+}
+
+/* Filters */
+.filter-button {
+	padding: 0.5rem 1.25rem;
+	border: 2px solid rgba(0, 0, 0, 0.06);
+	background-color: var(--white);
+	color: var(--dark-brown);
+	border-radius: 25px;
+	cursor: pointer;
+}
+
+.filter-button:hover {
+	border-color: var(--gold);
+	color: var(--gold);
+}
+
+.filter-button.active {
+	background-color: var(--gold);
+	color: var(--dark-brown);
+	border-color: var(--gold);
+}
+
+/* Menu items */
+
+.menu-hero {
+	background: var(--light-cream);
+	color: var(--dark-brown);
+	padding: 3.5rem 0;
+	text-align: center;
+}
+
+.menu-hero h1 {
+	color: var(--dark-brown);
+}
+
+.menu-hero p {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.menu-section {
+	padding: 3rem 0;
+}
+
+.menu-filters {
+	display: flex;
+	justify-content: center;
+	gap: 0.75rem;
+	margin-bottom: 3rem;
+	flex-wrap: wrap;
+}
+
+.filter-button {
+	padding: 0.5rem 1.25rem;
+	border: 2px solid #ddd;
+	background-color: white;
+	border-radius: 25px;
+	cursor: pointer;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+	border-color: var(--gold);
+	color: var(--gold);
+}
+
+.filter-button.active {
+	background-color: var(--gold);
+	color: var(--dark-brown);
+}
+
+.menu-category {
+	margin-bottom: 4rem;
+}
+
+.menu-category h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #333;
+	margin-bottom: 2rem;
+	border-bottom: 3px solid var(--gold);
+	padding-bottom: 1rem;
+}
+
+.menu-item {
+	background: var(--white);
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 4px 6px rgba(173, 81, 81, 0.06);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.menu-item {
+	background: white;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item-image {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	display: block;
+}
+
+.menu-item-content {
+	padding: 1.5rem;
+}
+
+.item-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	margin-bottom: 0.75rem;
+	gap: 1rem;
+}
+
+.menu-item h3 {
+	font-size: 1.15rem;
+	font-weight: 600;
+	color: #333;
+	margin: 0;
+}
+
+.price {
+	color: var(--gold);
+	font-weight: 700;
+	font-size: 1.1rem;
+	white-space: nowrap;
+}
+
+.menu-item p {
+	color: #666;
+	font-size: 0.95rem;
+	margin: 0;
+	line-height: 1.5;
+}
+
+.menu-cta {
+	background: var(--light-cream);
+	color: var(--dark-brown);
+	padding: 2.5rem 0;
+	text-align: center;
+	margin-top: 4rem;
+}
+
+.menu-cta h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.menu-cta p {
+	font-size: 1.1rem;
+	margin-bottom: 2rem;
+	opacity: 0.95;
+}
+
+.cta-button {
+	display: inline-block;
+	background-color: var(--gold);
+	color: var(--dark-brown);
+	padding: 0.75rem 2.5rem;
+	border-radius: 25px;
+	text-decoration: none;
+	font-weight: 600;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+	transform: scale(1.05);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+	color: var(--dark-brown);
+}
+
+.menu-items {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
+
+.menu-item:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 10px 22px rgba(59, 43, 31, 0.06);
+}
+
+.menu-item h3 {
+	color: var(--dark-brown);
+}
+
+.price {
+	color: var(--gold);
+	font-weight: 700;
+}
+
+/* Packages */
+.hero-content {
+	margin-left: 170px;
+}
+
+.package-card {
+	border-radius: 10px;
+	background: var(--white);
+	box-shadow: 0 6px 14px rgba(59, 43, 31, 0.04);
+	padding: 1.25rem;
+}
+
+.package-card h2 {
+	color: var(--dark-brown);
+}
+
+.package-badge {
+	display: inline-block;
+	background: rgba(0, 0, 0, 0.03);
+	color: var(--dark-brown);
+	padding: 0.3rem 0.6rem;
+	border-radius: 20px;
+	font-weight: 700;
+}
+
+/* Featured package accent */
+.package-card.featured {
+	border: 1px solid rgba(199, 161, 90, 0.15);
+	transform: translateY(-4px);
+}
+
+/* Order details container and status badge */
+.order-details-container {
+	margin-top: 2rem;
+	padding: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.06);
+	border-radius: 8px;
+	background-color: var(--white);
+}
+
+.status-badge {
+	background-color: var(--gold);
+	color: var(--dark-brown);
+	padding: 4px 8px;
+	border-radius: 4px;
+	font-weight: 700;
+}
+
+/* Booking and form elements */
+.booking-form-container,
+.info-card {
+	border-radius: 8px;
+	padding: 30px;
+	background-color: var(--white);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.form-control,
+input,
+textarea,
+select {
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-radius: 6px;
+	padding: 0.5rem 0.75rem;
+	font-size: 0.95rem;
+	color: var(--dark-brown);
+}
+
+/* Tweak heading sizes and spacing */
+h1 {
+	font-size: 2.25rem;
+}
+
+h2 {
+	font-size: 1.75rem;
+	margin-bottom: 0.75rem;
+}
+
+h3 {
+	font-size: 1.15rem;
+	margin-bottom: 0.5rem;
+}
+
+/* Add spacing between 'text bars' (inputs/checkbox/grid) and the next heading */
+.form-section {
+	margin-bottom: 1.25rem;
+}
+
+.form-group {
+	margin-bottom: 0.9rem;
+}
+
+.form-control,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	margin-bottom: 0.75rem;
+	/* little space between a text input and next element/heading */
+}
+
+/* Checkbox group: present items horizontally in two columns,
+   ensure each checkbox + label aligns horizontally and with proper spacing */
+.checkbox-grid,
+.checkbox-group {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.75rem 1.25rem;
+	padding: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.06);
+	border-radius: 6px;
+	background-color: var(--white);
+}
+
+/* Style each checkbox row with spacing and center-alignment */
+.checkbox-grid>div,
+.checkbox-group .checkbox-option {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	padding: 0.45rem 0;
+}
+
+/* Radio groups used in forms (for e.g., packages preference on QuoteRequest)
+   align them in a row and spacing to create a horizontal feel */
+.radio-group {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.75rem 1.25rem;
+	align-items: start;
+}
+
+/* Package option card: horizontal grid layout with centered radio and text
+   and highlight box when selected */
+.package-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+
+.package-option {
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-radius: 6px;
+	padding: 1rem;
+	text-align: center;
+	cursor: pointer;
+	background: var(--white);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+.package-option:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* Place radio centered above the package label, make it a little larger */
+.package-option input[type="radio"] {
+	display: block;
+	margin: 0 0 0.6rem 0;
+	transform: scale(1.12);
+}
+
+/* when the radio is checked, style the label/value box to highlight */
+.package-option input[type="radio"]:checked+label,
+.package-option input[type="radio"]:checked+label .package-label {
+	border-color: var(--gold);
+}
+
+.package-option input[type="radio"]:checked+label,
+.package-option input[type="radio"]:checked+label h6,
+.package-option input[type="radio"]:checked+label p {
+	color: var(--dark-brown);
+}
+
+.package-option input[type="radio"]:checked+label {
+	box-shadow: 0 6px 12px rgba(199, 161, 90, 0.08);
+}
+
+/* keep the package-label block centered */
+.package-label {
+	display: block;
+	cursor: pointer;
+	width: 100%;
+}
+
+/* Slight spacing after checkbox blocks and before next heading */
+.checkbox-grid,
+.checkbox-group,
+.package-grid {
+	margin-bottom: 1rem;
+}
+
+/* Ensure form-note or other micro text has small spacing above headings */
+.form-note {
+	margin-top: 0.5rem;
+	color: var(--muted);
+}
+
+/* Footer */
+footer {
+	background-color: var(--footer-dark);
+	color: var(--white);
+	text-align: center;
+	padding: 3px;
+	margin-top: 4rem;
+}
+
+/* footer {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 2rem;
+	margin-top: 4rem;
+} */
+
+/* Small tweaks */
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: var(--dark-brown);
+}
+
+a {
+	color: var(--dark-brown);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--gold);
+}
+
+
+/* --------------------------------------------------------------------- */
+
+.login-page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: var(--bg-light);
+}
+
+/* Card container */
+.login-card {
+	width: 100%;
+	max-width: 400px;
+	border-radius: 12px;
+	box-shadow: 0 6px 14px rgba(59, 43, 31, 0.12);
+	background-color: var(--white);
+	overflow: hidden;
+	text-align: center;
+}
+
+/* Card header */
+.login-card .card-header {
+	background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
+	color: #C7A15A;
+	font-weight: 700;
+	font-size: 1.25rem;
+	padding: 1rem;
+	text-align: center;
+}
+
+/* Form fields */
+.login-card .form-label {
+	font-weight: 600;
+	color: var(--dark-brown);
+}
+
+.login-card .form-control {
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	border-radius: 6px;
+	padding: 0.65rem;
+	font-size: 0.95rem;
+	color: var(--dark-brown);
+}
+
+.login-card .form-control:focus {
+	border-color: var(--gold);
+	box-shadow: 0 0 0 0.2rem rgba(199, 161, 90, 0.25);
+}
+
+/* Submit button */
+.login-card .btn-primary {
+	background: #C7A15A;
+	border: none;
+	font-weight: 700;
+	padding: 0.75rem;
+	border-radius: 6px;
+	color: var(--dark-brown);
+	transition: background 0.2s ease, transform 0.15s ease;
+	text-align: center;
+	transition: .5s;
+}
+
+.login-card .btn-primary:hover {
+	background: var(--accent-end);
+	color: #C7A15A;
+	transform: translateY(-2px);
+}
+
+/* Error alert */
+.login-card .alert-danger {
+	border-radius: 6px;
+	font-size: 0.9rem;
+	padding: 0.75rem;
+	margin-bottom: 1rem;
+}
+
+/* Footer links */
+.login-card .card-footer {
+	background-color: var(--bg-light);
+	font-size: 0.85rem;
+	color: var(--muted);
+	text-align: center;
+}
+
+.login-card .card-footer a {
+	color: var(--accent-start);
+	font-weight: 600;
+	text-decoration: none;
+	text-align: center;
+	transition: .5s;
+}
+
+.login-card .card-footer a:hover {
+	color: #C7A15A;
+	transform: translateY(-2px);
+}
+
+
+
+.navbar-dark {
+	background-color: #3B2B1F !important;
+}
+
+.navbar .navbar-nav .nav-link {
+	color: #fff !important;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+	color: var(--gold) !important;
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link {
+	color: var(--white) !important;
+}
+
+.navbar-dark .nav-link:hover,
+.navbar-dark .nav-link.active {
+	color: var(--gold) !important;
+	transition: .5s;
+}
+
+/* Card styling */
+.card {
+	background-color: var(--white);
+	border: 1px solid rgba(0, 0, 0, 0.06);
+	border-radius: 0.5rem;
+	box-shadow: 0 4px 10px rgba(59, 43, 31, 0.08);
+	transition: transform 0.2s ease;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+}
+
+/* Card headers */
+.card-header {
+	background-color: var(--gold) !important;
+	color: var(--dark-brown) !important;
+	font-weight: 600;
+}
+
+/* Quick stats numbers */
+.card-text.fs-4 {
+	color: var(--gold);
+	font-weight: 700;
+}
+
+/* Buttons */
+.btn-primary {
+	background-color: var(--gold);
+	border-color: var(--gold);
+	color: var(--dark-brown);
+	font-weight: 600;
+}
+
+.btn-primary:hover {
+	background-color: var(--dark-brown);
+	border-color: var(--dark-brown);
+	color: var(--white);
+}
+
+/* Alerts and badges */
+.alert-light {
+	background-color: var(--white);
+	border-color: rgba(0, 0, 0, 0.06);
+	color: var(--dark-brown);
+}
+
+.badge.bg-danger {
+	background-color: var(--gold) !important;
+	color: var(--dark-brown);
+}
+
+.badge.bg-success {
+	background-color: var(--dark-brown) !important;
+	color: var(--white);
+}
+
+/* Modal header */
+.modal-header {
+	background-color: var(--gold);
+	color: var(--dark-brown);
+}
+
+
+/* Grid & responsive */
+.grid-two {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+}
+
+thead .table-dark {
+	background-color: #3B2B1F;
+}
+
+@media (max-width: 768px) {
+	.grid-two {
+		grid-template-columns: 1fr;
+	}
+}
